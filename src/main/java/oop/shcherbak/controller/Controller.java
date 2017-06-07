@@ -33,8 +33,7 @@ public class Controller {
     }
     @RequestMapping ("/cars")
     public List <Car> getCars(){
-        DBCarDao dao = new DBCarDao();
-        dao.setDataSource(dataSource);
+        DBCarDao dao = new DBCarDao(dataSource);
         return dao.getAll();
     }
     @RequestMapping ("/client")
