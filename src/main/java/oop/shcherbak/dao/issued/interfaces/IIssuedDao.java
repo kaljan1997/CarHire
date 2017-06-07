@@ -9,5 +9,8 @@ import java.util.List;
  */
 public interface IIssuedDao {
     List<Issued> getAll();
-    Issued getById(int id);
+    Issued getIssued(int id);
+    void createIssued(Issued issued);
+    void deleteIssued(Integer id);
+    void updateIssued(Integer id,Issued issued);
 }

@@ -17,5 +17,8 @@ public interface IIssued {
     void setDateIssue(Date dateIssue);
     Date getReturnDate();
     void setReturnDate(Date returnDate);
+    Integer getId();
+    void setId(Integer id);
+
 
 }

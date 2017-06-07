@@ -20,17 +20,19 @@
                         <tr>
 
 
-                            <th>Ідентефікатор транспорту</th>
-                            <th>Ідентефікатор клієнта</th>
+                            <th>ID власника<th>
+                            <th>ID транспорту</th>
+                            <th>ID клієнта</th>
                             <th>Дата видачі</th>
                             <th>Дата повернення</th>
+
 
                         </tr>
                         </thead>
                         <tbody>
 
                         <tr ng-repeat = "item in greetings">
-
+                            <td>{{ item.id}}<td>
                             <td>{{ item.car.id }}</td>
                             <td>{{ item.client.id}}</td>
                             <td>{{ item.dateIssue }}</td>

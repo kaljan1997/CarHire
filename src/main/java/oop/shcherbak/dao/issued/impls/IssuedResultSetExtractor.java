@@ -27,6 +27,7 @@ public class IssuedResultSetExtractor implements ResultSetExtractor{
     @Override
     public Object extractData(ResultSet resultSet) throws SQLException, DataAccessException {
         Issued issued = new Issued();
+        issued.setId(resultSet.getInt("id"));
         issued.setCar(carDao.getCar(resultSet.getInt("car_id")));
         issued.setClient(clientDao.getClient(resultSet.getInt("client_id")));
         issued.setDateIssue(resultSet.getDate("date_issue"));

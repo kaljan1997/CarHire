@@ -23,19 +23,18 @@ public class DBCarDao implements ICarDao{
 
     public DBCarDao(DataSource dataSource) {
         this.dataSource = dataSource;
+
+        JdbcTemplate select = new JdbcTemplate(dataSource);
+        cars =  select.query("SELECT * FROM cars", new CarRowMapper());
     }
 
     @Override
     public List<Car> getAll() {
-        JdbcTemplate select = new JdbcTemplate(dataSource);
-        return select.query("SELECT * FROM cars", new CarRowMapper());
-
-
+        return cars;
     }
     @Override
     public Car getCar(Integer id) {
-        JdbcTemplate select = new JdbcTemplate(dataSource);
-        return ((List<Car>) select.query("SELECT * FROM cars", new CarRowMapper())).stream().filter(p->p.getId()== id.intValue()).findFirst().get();
+        return (cars).stream().filter(p->p.getId()== id.intValue()).findFirst().get();
     }
 
     @Override
