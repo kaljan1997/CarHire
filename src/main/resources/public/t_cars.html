@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cars</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body ng-app="App">
+<div class="container" style="margin-top: 30px" ng-controller = "CarCtrl" >
+    <div class="row">
+        <div class="col-md12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Cars</div>
+                <div class="panel-body">
+
+                    <table class="table table-striped">
+                        <thead>
+                        <tr>
+
+                            <th>ID</th>
+                            <th>Type</th>
+                            <th>Brand</th>
+                            <th>Ціна автомобіля</th>
+                            <th>Ціна оренди на день</th>
+
+
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr ng-repeat = "item in greetings">
+
+                            <td>{{ item.id }}</td>
+                            <td>{{ item.type }}</td>
+                            <td>{{ item.brand }}</td>
+                            <td>{{ item.price }}</td>
+                            <td>{{ item.hirePrice }}</td>
+
+                        </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
