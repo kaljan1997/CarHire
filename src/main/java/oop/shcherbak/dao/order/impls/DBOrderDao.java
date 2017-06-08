@@ -31,6 +31,10 @@ public class DBOrderDao implements IOrderDao {
         orders = select.query("SELECT * FROM orders", new OrderRowMapper(dataSource));
     }
 
+    public DBOrderDao(List<Order> orders) {
+        this.orders = orders;
+    }
+
     @Override
     public List<Order> getAll() {
         return orders;

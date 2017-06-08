@@ -30,6 +30,11 @@ public class ServiceOrder implements IServiceOrder {
     IClientDao clientDao;
     ICarDao carDao;
 
+    public ServiceOrder(IOrderDao dao) {
+        orderDao = dao;
+    }
+
+
     @Override
     public List<Order> getAll() {
         return orderDao.getAll();

@@ -20,6 +20,10 @@ public class ServiceClient implements IServiceClient{
 
     }
 
+    public ServiceClient(IClientDao dao) {
+        this.dao = dao;
+    }
+
     @Override
     public List<Client> getAll() {
         return dao.getAll();

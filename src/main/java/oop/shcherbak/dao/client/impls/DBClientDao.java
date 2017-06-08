@@ -29,6 +29,9 @@ public class DBClientDao implements IClientDao{
         JdbcTemplate select = new JdbcTemplate(dataSource);
         clients =  select.query("SELECT * FROM client", new ClientRowMapper());
     }
+    public DBClientDao(List<Client> cars) {
+        this.clients = cars;
+    }
 
     @Override
     public List<Client> getAll() {

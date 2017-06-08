@@ -28,6 +28,10 @@ public class DBCarDao implements ICarDao{
         cars =  select.query("SELECT * FROM cars", new CarRowMapper());
     }
 
+    public DBCarDao(List<Car> cars) {
+        this.cars = cars;
+    }
+
     @Override
     public List<Car> getAll() {
         return cars;

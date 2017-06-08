@@ -19,6 +19,10 @@ public class ServiceCar  implements IServiceCar{
 
     }
 
+    public ServiceCar(ICarDao dao) {
+        this.dao = dao;
+    }
+
     @Override
     public List<Car> getAll() {
         return dao.getAll();
