@@ -16,4 +16,5 @@ public interface IClient {
     void setAdress(String adress);
     String getPhone();
     void setPhone(String phone);
+    String getInfo();
 }

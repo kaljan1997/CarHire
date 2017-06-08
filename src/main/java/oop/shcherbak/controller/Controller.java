@@ -2,10 +2,10 @@ package oop.shcherbak.controller;
 
 import oop.shcherbak.dao.car.impls.DBCarDao;
 import oop.shcherbak.dao.client.impls.DBClientDao;
-import oop.shcherbak.dao.issued.impls.DBIssuedDao;
+import oop.shcherbak.dao.order.impls.DBOrderDao;
 import oop.shcherbak.model.car.impls.Car;
 import oop.shcherbak.model.client.impls.Client;
-import oop.shcherbak.model.issued.impls.Issued;
+import oop.shcherbak.model.order.impls.Order;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,9 +26,9 @@ public class Controller {
         dataSource.setUsername("root");
         dataSource.setPassword("worka841");
     }
-    @RequestMapping ("/issued")
-    public  List<Issued> getIssued(){
-        DBIssuedDao dao = new DBIssuedDao(dataSource);
+    @RequestMapping ("/order")
+    public  List<Order> getOrder(){
+        DBOrderDao dao = new DBOrderDao(dataSource);
         return dao.getAll();
     }
     @RequestMapping ("/cars")

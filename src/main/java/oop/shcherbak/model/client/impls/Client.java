@@ -77,6 +77,10 @@ public class Client implements IClient{
         this.phone = phone;
     }
 
+    public String getInfo(){
+         return surname + " "+ name+" "+fatherName;
+     }
+
     @Override
     public String toString() {
         return "Client{" +

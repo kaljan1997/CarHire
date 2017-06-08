@@ -1,29 +1,29 @@
-package oop.shcherbak.model.issued.impls;
+package oop.shcherbak.model.order.impls;
 
 import oop.shcherbak.model.car.impls.Car;
 import oop.shcherbak.model.client.impls.Client;
-import oop.shcherbak.model.issued.interfaces.IIssued;
+import oop.shcherbak.model.order.interfaces.IOrder;
 
 import java.util.Date;
 
 /**
  * Created by Kolja on 01.06.2017.
  */
-public class Issued implements IIssued{
+public class Order implements IOrder {
     private Integer id;
     private Car car;
     private Client client;
-    private Date dateIssue;
+    private Date dateOrder;
     private Date returnDate;
 
-    public Issued() {
+    public Order() {
     }
 
-    public Issued(Car car, Client client, Date dateIssue, Date returnDate, Integer id) {
+    public Order(Car car, Client client, Date dateOrder, Date returnDate, Integer id) {
         this.id = id;
         this.car = car;
         this.client = client;
-        this.dateIssue = dateIssue;
+        this.dateOrder = dateOrder;
         this.returnDate = returnDate;
     }
 
@@ -52,12 +52,12 @@ public class Issued implements IIssued{
         this.client = client;
     }
 
-    public Date getDateIssue() {
-        return dateIssue;
+    public Date getDateOrder() {
+        return dateOrder;
     }
 
-    public void setDateIssue(Date dateIssue) {
-        this.dateIssue = dateIssue;
+    public void setDateOrder(Date dateOrder) {
+        this.dateOrder = dateOrder;
     }
 
     public Date getReturnDate() {
@@ -70,10 +70,10 @@ public class Issued implements IIssued{
 
     @Override
     public String toString() {
-        return "Issued{" +
+        return "Order{" +
                 "car=" + car +
                 ", client=" + client +
-                ", dateIssue=" + dateIssue +
+                ", dateOrder=" + dateOrder +
                 ", returnDate=" + returnDate +
                 '}';
     }

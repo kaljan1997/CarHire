@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Issued</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/table.css">
     <script src="js/angular.min.js"></script>
     <script src="js/main.js"></script>
 </head>
@@ -12,7 +12,7 @@
     <div class="row">
         <div class="col-md12">
             <div class="panel panel-default">
-                <div class="panel-heading">Cars</div>
+                <div class="panel-heading">Журнал оренди</div>
                 <div class="panel-body">
 
                     <table class="table table-striped">
@@ -20,9 +20,12 @@
                         <tr>
 
 
-                            <th>ID власника<th>
+                            <th>ID оренди<th>
                             <th>ID транспорту</th>
+                            <th>Марка транспорту</th>
                             <th>ID клієнта</th>
+                            <th>Клієнт</th>
+                            <th>Тел. клієнта</th>
                             <th>Дата видачі</th>
                             <th>Дата повернення</th>
 
@@ -34,8 +37,11 @@
                         <tr ng-repeat = "item in greetings">
                             <td>{{ item.id}}<td>
                             <td>{{ item.car.id }}</td>
+                            <td>{{ item.car.brand }}</td>
                             <td>{{ item.client.id}}</td>
-                            <td>{{ item.dateIssue }}</td>
+                            <td>{{ item.client.info}}</td>
+                            <td>{{ item.client.phone}}</td>
+                            <td>{{ item.dateOrder }}</td>
                             <td>{{ item.returnDate }}</td>
 
                         </tr>

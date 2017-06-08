@@ -3,7 +3,7 @@ var app = angular.module("App", []);
 
 app.controller("IssuedCtrl", function($scope, $http){
     $scope.greetings = [];
-    $http.get('/issued').then(function (response){
+    $http.get('/order').then(function (response){
         $scope.greetings=response.data;
     });
 });
